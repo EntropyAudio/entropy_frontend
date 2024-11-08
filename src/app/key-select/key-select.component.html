@@ -1,0 +1,31 @@
+<div #keyContainer class="key-container">
+  <div class="flex-row">
+    <button *ngFor="let key of row1"
+            [class.selected]="selectedKeyId == key.id"
+            (click)="selectButton(key.id)"
+            class="keyButton"
+            mat-flat-button>
+      {{ key.label }}
+    </button>
+  </div>
+  <div class="flex-row">
+    <button *ngFor="let key of row2"
+            [class.selected]="selectedKeyId == key.id"
+            (click)="selectButton(key.id)"
+            class="keyButton"
+            mat-flat-button>
+      {{ key.label }}
+    </button>
+  </div>
+
+  <div class="flex-row">
+    <button [class.selected]="sharpSelected" (click)="toggleSharp()" class="keyButton" mat-flat-button> # </button>
+    <button *ngFor="let key of row3"
+            [class.selected]="selectedKeyId == key.id"
+            (click)="selectButton(key.id)"
+            class="keyButton"
+            mat-flat-button>
+      {{ key.label }}
+    </button>
+  </div>
+</div>

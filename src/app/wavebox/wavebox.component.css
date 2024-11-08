@@ -1,0 +1,157 @@
+.playButton {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  position: absolute;
+  z-index: 10;
+  color: var(--white);
+  transition: var(--default-transition) !important;
+  opacity: 0;
+}
+
+.waveform-component {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  /*margin: 0px 16px 16px 16px;*/
+}
+
+mat-icon {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  font-size: var(--font-large) !important;
+}
+
+.waveform-cont
+{
+  position: relative;
+  height: 76px;
+  width: 100%;
+  margin: -1.6px;
+  border: var(--line-size) solid var(--translucent-grey-2);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  transition: var(--default-transition) !important;
+}
+
+.noBorder {
+  transition: var(--default-transition) !important;
+  border: none !important;
+}
+
+.up {
+  color: var(--white) !important;
+  border-color: var(--white);
+
+}
+
+.up2 {
+  color: var(--color-accent) !important;
+  border-color: var(--color-accent);
+}
+
+.down {
+  color: var(--translucent-grey-2) !important;
+  border-color: var(--translucent-grey-2);
+}
+
+.grabbing {
+  cursor: grabbing !important;
+}
+
+.grab {
+  cursor: grab !important;
+}
+
+.hide {
+  transition: var(--default-transition) !important;
+  opacity: 0 !important;
+}
+
+.show {
+  transition: var(--default-transition) !important;
+  opacity: 1 !important;
+}
+
+.cover {
+  cursor: auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 8;
+  border-radius: 7px;
+}
+
+.waveform {
+  z-index: 0;
+  /*padding: 16px;*/
+  /*margin: 16px;*/
+  width: 90%;
+  transition: var(--default-transition) !important;
+  /*opacity: 0;*/
+}
+
+.progressBar {
+  width: 75%;
+}
+
+
+::ng-deep [id^="mat-progress-bar-"] {
+  display: none !important;
+}
+
+
+::ng-deep .mat-progress-bar-buffer {
+  background: linear-gradient(to right,
+  rgba(80, 80, 80, 0) 0%,
+  rgba(0, 0, 0, 0.3) 20%,
+  rgba(0, 0, 0, 0.3) 80%,
+  rgba(80, 80, 80, 0) 100%);
+}
+
+::ng-deep .mat-progress-bar-fill::after {
+  background-color: var(--translucent-grey-2) !important;
+}
+
+::ng-deep .mat-progress-bar-background mat-progress-bar-element {
+  background-image: none !important;
+  background-color: var(--translucent-dark-1) !important;
+}
+
+::ng-deep .mat-progress-bar {
+  height: var(--line-size) !important;
+  transition: var(--default-transition) !important;
+  opacity: 0 !important;
+}
+
+mat-progress-bar {
+  border-radius: 8px;
+  transition: var(--default-transition) !important;
+  opacity: 0 !important;
+  position: absolute !important;
+  z-index: 9 !important;
+  /*color: var(--color-accent) !important;*/
+  /*background-color: var(--color-accent) !important;*/
+}
+
+::ng-deep.mdc-linear-progress__buffer-bar {
+  background-color: var(--translucent-dark-1) !important;
+}
+
+::ng-deep.mdc-linear-progress__bar-inner {
+  border-radius: 8px;
+  border-color: var(--color-accent) !important;
+  opacity: .5;
+}

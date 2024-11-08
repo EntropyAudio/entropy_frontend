@@ -1,0 +1,137 @@
+.keyButton {
+  /*height: 50%;*/
+  /*width: 80px;*/
+  color: white;
+  background-color: var(--translucent-dark-1);
+  transition: var(--default-transition) !important;
+  height: 36px;
+  width: 72px;
+  min-width: 72px;
+  min-height: 36px;
+  padding: 0;
+  margin: 5px;
+}
+
+.bpm-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 138px !important;
+  gap: 25.4px;
+}
+
+.mat-error {
+  padding: 0;
+  margin: 0;
+  font-size: .6rem;
+}
+
+
+.selected {
+  background-color: var(--white);
+  color: var(--translucent-dark-1);
+}
+
+
+/* LOOP BUTTON */
+
+.button-cont {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /*margin-top: 8px;*/
+  /*margin-bottom: 16.6px;*/
+}
+
+
+.loopButton {
+  width: 92px !important;
+}
+
+/* TEXT FORM */
+
+input {
+  color: var(--white);
+  caret-color: var(--color-accent) !important;
+  text-align: center !important;
+  height: 32px !important;
+  font-size: 16px !important;
+}
+
+input::selection {
+  background: var(--color-accent-2) !important;
+}
+
+::ng-deep .mat-mdc-form-field-infix {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  width: auto !important;
+}
+
+/*.error-cont {*/
+/*  height: 16px;*/
+/*  font-size: 14px;*/
+/*  margin-bottom: 4px;*/
+/*  margin-top: 8px;*/
+/*}*/
+
+::ng-deep .bpmOutline {
+  width: 128px !important;
+  /*padding: 16px;*/
+  height: 36px !important;
+  margin: 0 !important;
+}
+
+::ng-deep.mat-mdc-form-field-error{
+  /*color: var(--warning) !important;*/
+  color: var(--color-accent) !important;
+}
+
+.textAndIncr {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between !important;
+  align-content: center;
+  align-items: center;
+}
+
+.incArrow {
+  width: 16px !important;
+  height: 16px !important;
+  font-size: 16px !important;
+  color: var(--translucent-grey-2)
+}
+
+.incrementor {
+  display: flex;
+  flex-direction: column;
+}
+
+.spacer {
+  width: 16px;
+}
+
+::ng-deep .incBtn {
+  width: 16px !important;
+  min-width: 16px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 16px !important;
+  min-height: 16px !important;
+  margin-left: 2px;
+}
+
+.scroll {
+  cursor: ns-resize !important; /* Or any other pointer style that indicates scrolling */
+}

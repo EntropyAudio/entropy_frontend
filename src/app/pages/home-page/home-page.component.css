@@ -1,0 +1,214 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100%;
+  width: 100%;
+
+  /*overflow: hidden;*/
+}
+
+.appButton {
+  width: 100%;
+  height: 180px;
+  /*height: 128px;*/
+  color: var(--white);
+  font-size: var(--font-large);
+  /*background-color: var(--translucent-dark);*/
+  text-align: center;
+}
+
+/* SIGNIN */
+
+.entropyLogo {
+  height: 32px;
+  margin-bottom: 16px;
+}
+
+.signinCard {
+  padding: 0;
+  animation: var(--defualt-fade);
+  width: 352px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: var(--translucent);
+  color: white;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.signin-container {
+  width: 288px;
+  padding: 32px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+  border-radius: 8px;
+}
+
+.loginButton {
+  width: 100%;
+  color: var(--white);
+  background-color: var(--translucent-dark-1);
+  height: 44px;
+}
+
+::ng-deep .emailForm {
+  width: 100%;
+  height: 44px !important;
+  color: white !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.or {
+  color: var(--translucent-grey-2);
+}
+
+.horizontal-line {
+  height: 1.6px;
+  background-color: var(--translucent-grey-2);
+  width: 40%;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.line-container {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+
+::ng-deep .mdc-notched-outline__leading {
+  border-color: var(--translucent-grey-2) !important;
+}
+
+::ng-deep .mdc-notched-outline__trailing {
+  border-color: var(--translucent-grey-2) !important;
+}
+
+/*::ng-deep .mdc-notched-outline__leading {*/
+/*  border-color: var(--color-accent) !important;*/
+/*}*/
+
+/*::ng-deep .mdc-notched-outline__trailing {*/
+/*  border-color: var(--color-accent) !important;*/
+/*}*/
+
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}
+::ng-deep .mat-mdc-form-field-infix {
+  height: 44px !important;
+  min-height: 0px !important;
+}
+::ng-deep .mat-mdc-text-field-wrapper {
+  height: 44px !important;
+}
+::ng-deep .mat-mdc-form-field-flex {
+  height: 44px !important;
+}
+::ng-deep .mat-mdc-form-field-infix {
+  padding: 0 !important;
+}
+
+input {
+  color: var(--white) !important;
+  caret-color: var(--color-accent) !important;
+  height: 44px !important;
+  text-align: center !important;
+}
+
+input::placeholder {
+  color: var(--translucent-grey-2) !important;
+  text-align: center !important;
+}
+
+input::selection {
+  background: var(--color-accent-2) !important;
+}
+
+.btnInnerContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.providerLogo {
+  height: 24px;
+}
+
+video {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+.slogan-text {
+  animation: var(--defualt-fade);
+  /*animation: opacityFadeSlogan 2000ms forwards;*/
+  /*top: 200px;*/
+  /*position: fixed;*/
+  /*padding-bottom: 560px;*/
+  color: var(--translucent-dark-1);
+  text-align: center;
+  font-size: 150px;
+  font-weight: 540;
+  letter-spacing: 10px;
+  /*opacity: .74;*/
+  line-height: 182px;
+
+  width: 1000px;
+  /*height: 400px;*/
+  text-overflow: clip;
+  /*z-index:-1*/
+  user-select: none;
+}
+
+.text-container {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+@keyframes opacityFadeSlogan {
+  from {
+    /*transform: scale(0.9);*/
+    opacity: 0;
+  }
+  to {
+    opacity: .54;
+  }
+}

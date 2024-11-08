@@ -1,0 +1,146 @@
+::ng-deep .mat-toolbar {
+  display: flex;
+  justify-content: space-between !important;
+  align-items: center !important;
+  align-content: center !important;
+  position: absolute !important;
+  z-index: 10 !important;
+  background-color: rgba(0,0,0,0)!important;
+  color: var(--white) !important;
+}
+
+.txt {
+  vertical-align: center;
+  text-align: center;
+  font-family: 'Quando', serif !important;
+  font-size: 1.25rem;
+  /*font-size: 1.5rem;*/
+}
+
+.header-buttons {
+  color: var(--white) !important;
+  margin: 0 32px;
+  /*border-bottom: var(--white) 1px solid;*/
+  /*border-radius: 0 !important;*/
+}
+
+.profile-button {
+  color: white !important;
+}
+
+.img {
+  height: 32px;
+  padding-right: 12px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.homepage-links {
+  /*position: absolute;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  /*width: 500px;*/
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+/* Quick Settings */
+
+::ng-deep .matMenu {
+  background-color: var(--translucent) !important;
+  color: var(--white) !important;
+  transform: translateX(22.51px) translateY(16px) !important;
+
+}
+
+::ng-deep .mat-mdc-menu-content {
+  padding: 0 !important;
+}
+
+::ng-deep .menuItem {
+  color: var(--white) !important;
+  text-align: center !important;
+}
+
+.menuNavBtns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+::ng-deep .backBtn {
+  padding: 0 !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px !important;
+  min-height: 36px !important;
+  color: var(--white) !important;
+}
+
+::ng-deep .waveboxBtn {
+  padding: 0 !important;
+  width: 48px !important;
+  height: 48px !important;
+  min-width: 48px !important;
+  min-height: 48px !important;
+  color: var(--white) !important;
+}
+
+mat-icon {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-content: center !important;
+  align-items: center !important;
+  text-align: center !important;
+  font-size: var(--font-large) !important;
+}
+
+.audioSettings {
+  margin: 16px;
+  width: 220px !important;
+}
+
+.valueSelector {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 16px;
+}
+
+.audioSettingsTitle {
+  font-size: var(--font-large);
+  width: 160px !important;
+}
+
+.subTitle {
+  color: var(--translucent-grey-2);
+  padding-top: 8px;
+}
+
+.creditsMenu {
+  margin: 16px;
+  width: 220px !important;
+}
+
+.creditsDisplay {
+  padding-top: 16px;
+  text-align: center;
+}
+
+.subscriptionTier {
+  font-size: var(--font-large);
+}
