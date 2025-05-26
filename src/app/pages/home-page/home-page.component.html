@@ -4,14 +4,13 @@
       <span class="slogan-text"> Music is as much of a science as it is an art. </span>
     </div>
 
-    <mat-card class="signinCard">
-
+    <mat-card class="signin-card">
       <div class="signin-container" *ngIf="!authService.user">
-        <img src="assets/logo_icon.svg" class="entropyLogo" >
+        <img src="assets/logo_icon.svg" class="entropy-logo" >
 
-        <button class="loginButton" mat-flat-button (click)="authService.loginWithGoogle()">
-          <div class="btnInnerContainer">
-            <img src="assets/google-logo-NePEveMl%20(openai).svg" class="providerLogo">
+        <button class="login-button" mat-flat-button (click)="authService.loginWithGoogle()">
+          <div class="inner-button-container">
+            <img src="assets/google-logo-NePEveMl%20(openai).svg" class="provider-logo">
             Signin with Google
           </div>
         </button>
@@ -22,14 +21,14 @@
           <div class="horizontal-line"></div>
         </div>
 
-        <mat-form-field class="emailForm" appearance="outline">
+        <mat-form-field class="email-form" appearance="outline">
           <input spellcheck="false" matInput placeholder="Enter Email">
         </mat-form-field>
 
-        <button class="loginButton" mat-flat-button (click)="authService.login('', '')"> Continue </button>
+        <button class="login-button" mat-flat-button (click)="authService.login('', '')"> Continue </button>
       </div>
 
-      <a class="appButton" mat-button routerLink="/app" *ngIf="authService.user"> Start Creating </a>
+      <a class="app-button" mat-button routerLink="/app" *ngIf="authService.user"> Start Creating </a>
 
     </mat-card>
   </div>

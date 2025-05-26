@@ -1,46 +1,5 @@
-.container {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  width: 100%;
-  z-index: 20 !important;
-}
-
 app-navbar {
   position: absolute;
   width: 100%;
-  animation: var(--defualt-fade),
-}
-::ng-deep.mat-mdc-button>.mat-icon{
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-}
-
-::ng-deep.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action{
-  color: var(--color-accent) !important;
-  margin-bottom: 12px !important;
-}
-
-::ng-deep.mat-snack-bar-container {
-  background-color: var(--translucent-dark-1) !important;
-  color: var(--white);
-  text-align: center;
-}
-
-::ng-deep.mat-simple-snackbar {
-  flex-direction: column !important;
-  justify-content: space-between;
-}
-
-::ng-deep.mat-simple-snackbar-action {
-  margin-top: 4px !important;
-}
-
-::ng-deep.mat-mdc-simple-snack-bar{
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: center !important;
-  align-content: center;
-  align-items: center;
+  animation: var(--default-fade),
 }

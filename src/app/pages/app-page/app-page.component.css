@@ -6,6 +6,6 @@
   flex-direction: column;
   align-items: center;
   /*justify-content: end;*/
-  animation: var(--defualt-fade);
+  animation: var(--default-fade);
   transition: var(--default-transition);
 }
