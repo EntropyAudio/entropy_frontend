@@ -1,9 +1,11 @@
 @import '@angular/material/prebuilt-themes/indigo-pink.css';
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import 'node_modules/firebaseui/dist/firebaseui.css';
 
 :root {
   --greyscale: 100;
   --white: #ffffff;
+
 
   /* Grey */
   --translucent: rgba(var(--greyscale), var(--greyscale), var(--greyscale), 0.4);
@@ -11,8 +13,9 @@
   --translucent-grey-2: rgba(200, 200, 200, 0.25);
 
   /* Dark */
-  --translucent-dark-1: rgba(49, 51, 54, .7); /* The main translucent dark color */
-  --translucent-dark-3: rgba(49, 51, 54, .1); /* A more transparent dark */
+  --translucent-dark-1: rgba(49, 51, 54, .7);
+  --translucent-dark-2: rgba(49, 51, 54, .35);
+  --translucent-dark-3: rgba(49, 51, 54, .1);
 
   /* Background */
   --background-color: rgb(43, 43, 44);
