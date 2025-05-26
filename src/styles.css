@@ -23,8 +23,8 @@
 
   --line-size: 3px;
   --line-size-2: 6px;
-  --font-large: 24px;
-  --font-small: 14px;
+  --font-large: 1.5rem;
+  --font-small: 0.875rem;
   --interface-width: 750px;
 
   --ripple: var(--translucent-dark-1);

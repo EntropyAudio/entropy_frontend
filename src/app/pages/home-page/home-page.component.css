@@ -10,23 +10,21 @@
 
 .app-button {
   width: 100%;
-  height: 180px;
-  /*height: 128px;*/
+  height: 12rem;
   color: var(--white);
   font-size: var(--font-large);
-  /*background-color: var(--translucent-dark);*/
   text-align: center;
 }
 
 .entropy-logo {
-  height: 32px;
-  margin-bottom: 16px;
+  height: 2rem;
+  margin-bottom: 1rem;
 }
 
 .signin-card {
   padding: 0;
   animation: var(--default-fade);
-  width: min(80vw, 300px);
+  width: min(80vw, 18.6rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -39,42 +37,59 @@
 
 .signin-container {
   width: 80%;
-  max-width: 288px;
-  padding: 32px;
+  padding: 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
-.login-button {
+.signin-button {
   width: 100%;
   color: var(--white);
   background-color: var(--translucent-dark-1);
-  height: 44px;
+  height: 2.75rem;
+  font-size: var(--font-small) !important;
 }
 
 ::ng-deep .email-form {
   width: 100%;
-  height: 44px !important;
+  height: 2.75rem !important;
   color: white !important;
+  font-size: var(--font-small) !important;
+}
+::ng-deep .mat-mdc-form-field-subscript-wrapper {
+  display: none !important;
+}
+::ng-deep .mat-mdc-form-field-infix {
+  height: 2.75rem !important;
+  min-height: 0 !important;
+  padding: 0 !important;
+}
+
+input {
+  color: var(--white) !important;
+  caret-color: var(--color-accent) !important;
+  height: 2.75rem !important;
+  text-align: center !important;
 }
 
 .or {
   color: var(--translucent-grey-2);
+  font-size: var(--font-small);
 }
 
 .horizontal-line {
-  height: 1.6px;
+  height: 0.1rem;
   background-color: var(--translucent-grey-2);
   width: 40%;
   border-radius: 8px;
 }
 
 .line-container {
-  margin-top: 16px;
-  margin-bottom: 16px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -91,22 +106,6 @@
   border-color: var(--translucent-grey-2) !important;
 }
 
-::ng-deep .mat-mdc-form-field-subscript-wrapper {
-  display: none !important;
-}
-::ng-deep .mat-mdc-form-field-infix {
-  height: 44px !important;
-  min-height: 0px !important;
-  padding: 0 !important;
-}
-
-input {
-  color: var(--white) !important;
-  caret-color: var(--color-accent) !important;
-  height: 44px !important;
-  text-align: center !important;
-}
-
 input::placeholder {
   color: var(--translucent-grey-2) !important;
   text-align: center !important;
@@ -121,22 +120,22 @@ input::selection {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+  gap: 1rem;
 }
 
 .provider-logo {
-  height: 24px;
+  height: 1.6rem;
 }
 
 .slogan-text {
   animation: var(--default-fade);
   color: var(--translucent-dark-2);
   text-align: center;
-  font-size: 128px;
+  font-size: 8rem;
   font-weight: 600;
-  letter-spacing: 10px;
-  line-height: 182px;
-  width: 1000px;
+  letter-spacing: 0.6rem;
+  line-height: 12rem;
+  width: 62rem;
   overflow: hidden;
   user-select: none;
 }
