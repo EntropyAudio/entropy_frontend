@@ -24,6 +24,7 @@
   --line-size: 3px;
   --line-size-2: 6px;
   --font-large: 1.5rem;
+  --font-medium: 1.25rem;
   --font-small: 0.875rem;
   --interface-width: 750px;
 
@@ -32,6 +33,9 @@
 
   --default-fade: opacityFade ease-in 300ms forwards;
   --default-transition: all 300ms cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  --mobile-breakpoint: 576px;
+  --tablet-breakpoint: 1024px;
 
   overflow-x: hidden;
 }

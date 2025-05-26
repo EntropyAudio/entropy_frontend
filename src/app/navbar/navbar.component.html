@@ -1,7 +1,7 @@
 <mat-toolbar>
   <a routerLink="/" class="logo" >
       <img src="assets/logo_icon.svg" class="img">
-      <span class="logo-txt">Entropy Audio</span>
+      <span class="logo-text">Entropy Audio</span>
   </a>
 
   <div class="header-button-container">
@@ -30,15 +30,15 @@
   <mat-menu [hasBackdrop]="false" #menu class="matMenu" xPosition="before">
     <div (click)="$event.stopPropagation()">
       <div *ngIf="settingsMenu">
-        <button (click)="openCreditsMenu($event)" class="menuItem" mat-menu-item> View Credits </button>
-        <button (click)="openAudioSettings($event)" class="menuItem" mat-menu-item> App Settings </button>
+        <button (click)="openCreditsMenu($event)" class="menu-item" mat-menu-item> View Credits </button>
+        <button (click)="openAudioSettings($event)" class="menu-item" mat-menu-item> App Settings </button>
         <!--      <button class="menu-item" mat-menu-item> history </button>-->
-        <a class="menuItem" routerLink="/" mat-menu-item (click)="signOut()"> Sign Out </a>
+        <a class="menu-item" routerLink="/" mat-menu-item (click)="signOut()"> Sign Out </a>
       </div>
 
 
-      <div class="menuNavBtns">
-        <button *ngIf="!settingsMenu" (click)="returnToSettingsMenu($event)" mat-button class="backBtn">
+      <div class="menu-nav-buttons">
+        <button *ngIf="!settingsMenu" (click)="returnToSettingsMenu($event)" mat-button class="back-button">
           <mat-icon>navigate_before</mat-icon>
         </button>
 
@@ -49,24 +49,24 @@
 
 
       <div class="subMenu" *ngIf="creditsMenu">
-        <div class="creditsMenu">
+        <div class="credits-menu">
           <div>
-            <div class="subscriptionTier"> Free</div>
-            <div class="subTitle">Subscription Tier</div>
+            <div class="subscription-tier"> Free</div>
+            <div class="sub-title">Subscription Tier</div>
           </div>
-          <div class="creditsDisplay">Credits: {{firestore.getCredits()}} / 25</div>
+          <div class="credits-display">Credits: {{firestore.getCredits()}} / 25</div>
         </div>
       </div>
 
       <div class="subMenu" *ngIf="audioSettings">
-        <div class="audioSettings">
+        <div class="audio-settings">
           <div>
-            <div class="audioSettingsTitle"> Generations Per Prompt</div>
-            <div class="subTitle">Increasing generations uses more credits per prompt.</div>
+            <div class="audio-settings-title"> Generations Per Prompt</div>
+            <div class="sub-title">Increasing generations uses more credits per prompt.</div>
           </div>
-          <div class="valueSelector">
-            <button (click)="updateWaveboxes(2)" class="waveboxBtn" mat-button>2</button>
-            <button (click)="updateWaveboxes(4)" class="waveboxBtn" mat-button>4</button>
+          <div class="value-selector">
+            <button (click)="updateWaveboxes(2)" class="num-wavebox-button" mat-button>2</button>
+            <button (click)="updateWaveboxes(4)" class="num-wavebox-button" mat-button>4</button>
           </div>
         </div>
       </div>

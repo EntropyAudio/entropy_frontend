@@ -10,9 +10,9 @@
 
 .app-button {
   width: 100%;
-  height: 12rem;
+  height: 14rem;
   color: var(--white);
-  font-size: var(--font-large);
+  font-size: var(--font-medium);
   text-align: center;
 }
 
@@ -33,6 +33,7 @@
   color: white;
   border-radius: 8px;
   z-index: 10;
+  overflow: hidden;
 }
 
 .signin-container {
@@ -51,6 +52,8 @@
   background-color: var(--translucent-dark-1);
   height: 2.75rem;
   font-size: var(--font-small) !important;
+  text-wrap: nowrap;
+  overflow: hidden;
 }
 
 ::ng-deep .email-form {
@@ -58,6 +61,8 @@
   height: 2.75rem !important;
   color: white !important;
   font-size: var(--font-small) !important;
+  text-overflow: clip !important;
+  text-align: center !important;
 }
 ::ng-deep .mat-mdc-form-field-subscript-wrapper {
   display: none !important;
@@ -66,6 +71,7 @@
   height: 2.75rem !important;
   min-height: 0 !important;
   padding: 0 !important;
+  overflow: hidden !important;
 }
 
 input {
