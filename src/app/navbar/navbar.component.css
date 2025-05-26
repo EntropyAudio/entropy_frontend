@@ -9,7 +9,7 @@
   color: var(--white) !important;
 }
 
-.txt {
+.logo-txt {
   vertical-align: center;
   text-align: center;
   font-family: 'Quando', serif !important;
@@ -17,11 +17,20 @@
   /*font-size: 1.5rem;*/
 }
 
+/*@media (max-width: 500px) {*/
+/*  .logo-txt {*/
+/*    display: none;*/
+/*  }*/
+/*}*/
+
 .header-buttons {
   color: var(--white) !important;
-  margin: 0 32px;
-  /*border-bottom: var(--white) 1px solid;*/
-  /*border-radius: 0 !important;*/
+}
+
+@media (max-width: 550px) {
+  .header-buttons-optional {
+    display: none;
+  }
 }
 
 .profile-button {
@@ -40,18 +49,14 @@
   color: var(--white);
 }
 
-.homepage-links {
-  /*position: absolute;*/
-  /*left: 0;*/
-  /*right: 0;*/
-  /*margin-left: auto;*/
-  /*margin-right: auto;*/
-  /*width: 500px;*/
+.header-button-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-content: center;
+  justify-content: end;
   align-items: center;
+  margin-left: auto;
+  width: 50%;
+  gap: 2rem;
 }
 
 /* Quick Settings */

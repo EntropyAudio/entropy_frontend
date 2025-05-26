@@ -4,15 +4,13 @@
   justify-content: center;
   flex-direction: row;
   width: 100%;
-  /*height: 100%;*/
   z-index: 20 !important;
 }
 
 app-navbar {
   position: absolute;
-  min-width: var(--interface-width) !important;
   width: 100%;
-  animation: var(--defualt-fade)
+  animation: var(--defualt-fade),
 }
 ::ng-deep.mat-mdc-button>.mat-icon{
   margin-left: 0 !important;
