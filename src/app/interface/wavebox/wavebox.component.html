@@ -9,11 +9,11 @@
       (mousedown)="onMouseDown()"
       (mouseup)="onMouseUp()"
       class="cover"></div>
-    <mat-progress-bar [ngClass]="{'show': stateService.getCurrentState() == GenerationState.Generating, 'hide': stateService.getCurrentState() != GenerationState.Generating}" class="progressBar" [mode]="progressBarMode"></mat-progress-bar>
+    <mat-progress-bar [ngClass]="{'show': stateService.getCurrentState() == GenerationState.Generating, 'hide': stateService.getCurrentState() != GenerationState.Generating}" class="progress-bar" [mode]="progressBarMode"></mat-progress-bar>
     <div [ngStyle]="{'opacity': stateService.getCurrentState() == GenerationState.Displaying || stateService.getCurrentState() == GenerationState.Selected ? 1 : 0}" class="waveform" #waveform></div>
   </div>
 
-  <button [ngStyle]="{'opacity': stateService.getCurrentState() == GenerationState.Displaying ? 1 : 0}" [disabled]="stateService.getCurrentState() != GenerationState.Displaying" class="playButton" (click)="audioService.pauseAndPlay(audioID)" mat-button>
+  <button [ngStyle]="{'opacity': stateService.getCurrentState() == GenerationState.Displaying ? 1 : 0}" [disabled]="stateService.getCurrentState() != GenerationState.Displaying" class="play-Button" (click)="audioService.pauseAndPlay(audioID)" mat-button>
     <mat-icon>play_arrow</mat-icon>
   </button>
 </div>

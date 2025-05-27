@@ -1,8 +1,8 @@
-.playButton {
-  width: 36px !important;
-  height: 36px !important;
-  min-width: 36px !important;
-  min-height: 36px !important;
+.play-Button {
+  width: 2rem !important;
+  height: 2rem !important;
+  min-width: 2rem !important;
+  min-height: 2rem !important;
   position: absolute;
   z-index: 10;
   color: var(--white);
@@ -16,8 +16,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
-  margin: 16px;
-  /*margin: 0px 16px 16px 16px;*/
+  margin: 1rem;
 }
 
 mat-icon {
@@ -33,9 +32,8 @@ mat-icon {
 .waveform-cont
 {
   position: relative;
-  height: 76px;
+  height: 4rem;
   width: 100%;
-  margin: -1.6px;
   border: var(--line-size) solid var(--translucent-grey-2);
   border-radius: 8px;
   display: flex;
@@ -46,7 +44,7 @@ mat-icon {
   transition: var(--default-transition) !important;
 }
 
-.noBorder {
+.no-border {
   transition: var(--default-transition) !important;
   border: none !important;
 }
@@ -90,19 +88,17 @@ mat-icon {
   height: 100%;
   width: 100%;
   z-index: 8;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
 .waveform {
   z-index: 0;
-  /*padding: 16px;*/
-  /*margin: 16px;*/
   width: 90%;
   transition: var(--default-transition) !important;
   /*opacity: 0;*/
 }
 
-.progressBar {
+.progress-bar {
   width: 75%;
 }
 

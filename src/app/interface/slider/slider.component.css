@@ -1,12 +1,15 @@
 .label-container {
   display: flex;
   justify-content: space-between;
+  font-size: var(--font-small) !important;
 }
 .value-label {
   color: var(--translucent-grey-2);
+  transition: none !important;
 }
 .name-label {
   color: var(--translucent-grey-2);
+  transition: none !important;
 }
 
 .name-label-container {
