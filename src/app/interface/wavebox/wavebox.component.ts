@@ -1,10 +1,10 @@
 import {Component, ElementRef, HostListener, Inject, Input, OnInit, ViewChild} from '@angular/core';
-import {AudioService} from "../services/audio.service";
+import {AudioService} from "../../services/audio.service";
 import {ProgressBarMode} from "@angular/material/progress-bar";
 import WaveSurfer from "wavesurfer.js";
 import {DOCUMENT} from "@angular/common";
-import {DebugState, GenerationState, StateService} from "../services/state.service";
-import {InterfaceComponent} from "../interface/interface.component";
+import {DebugState, GenerationState, StateService} from "../../services/state.service";
+import {InterfaceComponent} from "../interface.component";
 
 @Component({
   selector: 'app-wavebox',

@@ -4,7 +4,7 @@ import {AudioService} from "../services/audio.service";
 import {ReqService} from "../services/req.service";
 import {MatRipple} from "@angular/material/core";
 import {DOCUMENT} from "@angular/common";
-import {WaveboxComponent} from "../wavebox/wavebox.component";
+import {WaveboxComponent} from "./wavebox/wavebox.component";
 import {FirestoreService} from "../services/firestore.service";
 import {DebugState, GenerationState, StateService} from "../services/state.service";
 import {animate, query, style, transition, trigger} from "@angular/animations";

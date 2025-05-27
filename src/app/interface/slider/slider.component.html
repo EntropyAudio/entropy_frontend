@@ -1,0 +1,10 @@
+<mat-slider [max]="max" [min]="min" [step]="step"
+            (input)="sliderChange()">
+  <input [(ngModel)]= "value" matSliderThumb>
+</mat-slider>
+
+<div class="label-container">
+  <mat-label class="value-label">{{min}}</mat-label>
+  <mat-label class="name-label">{{name}}</mat-label>
+  <mat-label class="value-label">{{max}}</mat-label>
+</div>

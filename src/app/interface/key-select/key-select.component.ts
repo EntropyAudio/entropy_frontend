@@ -1,5 +1,5 @@
 import {Component, ElementRef, HostListener, OnInit, ViewChild} from '@angular/core';
-import {ReqService} from "../services/req.service";
+import {ReqService} from "../../services/req.service";
 
 interface Key {
   id: number;

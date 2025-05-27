@@ -1,8 +1,8 @@
 import {ChangeDetectorRef, Component, ElementRef, Inject, OnInit, ViewChild} from '@angular/core';
-import {ReqService} from "../services/req.service";
+import {ReqService} from "../../services/req.service";
 import {FormControl, Validators} from '@angular/forms';
 import {DOCUMENT} from "@angular/common";
-import {GenerationState, StateService} from "../services/state.service";
+import {GenerationState, StateService} from "../../services/state.service";
 
 @Component({
   selector: 'app-bpm-select',

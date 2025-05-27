@@ -1,12 +1,12 @@
-.keyButton {
+.key-button {
   color: white;
   background-color: var(--translucent-dark-1);
-  margin: 5px;
+  margin: 0.4rem;
   padding: 0;
-  height: 36px;
-  width: 36px;
-  min-width: 36px;
-  min-height: 36px;
+  height: 2rem;
+  width: 2rem;
+  min-width: 2rem;
+  min-height: 2rem;
   transition: var(--default-transition);
   display: flex;
   flex-direction: row;

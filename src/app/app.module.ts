@@ -13,9 +13,9 @@ import { MatGridListModule} from "@angular/material/grid-list";
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatToolbarModule} from "@angular/material/toolbar";
 import { MatProgressBarModule} from "@angular/material/progress-bar";
-import { KeySelectComponent } from './key-select/key-select.component';
-import { BpmSelectComponent } from './bpm-select/bpm-select.component';
-import { SliderComponent } from './slider/slider.component';
+import { KeySelectComponent } from './interface/key-select/key-select.component';
+import { BpmSelectComponent } from './interface/bpm-select/bpm-select.component';
+import { SliderComponent } from './interface/slider/slider.component';
 import { MatRippleModule} from "@angular/material/core";
 import { MatIconModule} from "@angular/material/icon";
 import { provideAnimations } from '@angular/platform-browser/animations';
@@ -34,7 +34,7 @@ import {
   MatExpansionPanelDescription,
   MatExpansionPanelTitle
 } from "@angular/material/expansion";
-import { WaveboxComponent } from "./wavebox/wavebox.component";
+import { WaveboxComponent } from "./interface/wavebox/wavebox.component";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import {BottomLinksComponent} from "./bottom-links/bottom-links.component";
