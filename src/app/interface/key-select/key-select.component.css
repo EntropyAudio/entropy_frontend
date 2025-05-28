@@ -1,13 +1,12 @@
 .key-button {
   color: white;
   background-color: var(--translucent-dark-1);
-  margin: 0.4rem;
+  margin: 0.3rem 0.6rem 0.3rem 0.6rem;
   padding: 0;
   height: 2rem;
   width: 2rem;
   min-width: 2rem;
   min-height: 2rem;
-  /*transition: var(--default-transition);*/
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -19,8 +18,8 @@
 }
 
 .selected {
-  background-color: var(--white);
-  color: var(--translucent-dark-1);
+  background-color: var(--white) !important;
+  color: var(--translucent-dark-1) !important;
 }
 
 .key-container {

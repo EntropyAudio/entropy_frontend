@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  height: 8.5rem !important;
   gap: 1.5rem;
 }
 
@@ -14,13 +13,12 @@
 /*  font-size: .6rem;*/
 /*}*/
 
-
 .selected {
-  background-color: var(--white);
-  color: var(--translucent-dark-1);
+  background-color: var(--white) !important;
+  color: var(--translucent-dark-1) !important;
 }
 
-.button-cont {
+.button-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -28,9 +26,11 @@
   align-content: center;
 }
 
-
 .loop-button {
-  width: 6rem !important;
+  width: 4rem !important;
+  height: 2rem !important;
+  color: white;
+  background-color: var(--translucent-dark-1);
 }
 
 input {
@@ -56,9 +56,9 @@ input::selection {
 }
 
 ::ng-deep .bpm-outline {
-  width: 8rem !important;
   height: 2rem !important;
   margin: 0 !important;
+  border-radius: 16px;
 }
 
 ::ng-deep.mat-mdc-form-field-error{
@@ -71,6 +71,7 @@ input::selection {
   justify-content: space-between !important;
   align-content: center;
   align-items: center;
+  width: 12rem;
 }
 
 .inc-arrow {

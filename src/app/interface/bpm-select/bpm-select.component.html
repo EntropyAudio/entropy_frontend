@@ -1,6 +1,4 @@
-
 <div class="bpm-container">
-
   <div class="text-and-incr">
     <div class="spacer"></div>
 
@@ -23,24 +21,7 @@
     </div>
   </div>
 
-
-<!--  <div class="error-cont">-->
-<!--    <mat-error class="bpm-flexitem" *ngIf="(numberInputControl.hasError('min') || numberInputControl.hasError('max'))-->
-<!--    && loopSelected-->
-<!--    && !numberInputControl.hasError('pattern')">-->
-<!--      error: 60 <= bpm <= 200-->
-<!--    </mat-error>-->
-<!--    <mat-error class="bpm-flexitem" *ngIf="numberInputControl.hasError('pattern') && loopSelected">-->
-<!--      error: bpm must be numeric-->
-<!--    </mat-error>-->
-<!--  </div>-->
-
-  <div class="button-cont">
-    <button class="loop-button keyButton" [class.selected]="loopSelected" (click)="toggleLoop()" mat-flat-button> loop </button>
-<!--    <button class="bpm-flexitem keyButton" [class.selected]="!loopSelected" (click)="toggleBPM(); reqService.loop=false" mat-flat-button> one shot </button>-->
-    <!--  <button class="bpm-flexitem keyButton" [class.selected]="BPMSelected" (click)="toggleLoop() "mat-flat-button> loop </button>-->
+  <div class="button-container">
+    <button class="loop-button key-button" [class.selected]="loopSelected" (click)="toggleLoop()" mat-flat-button> loop </button>
   </div>
-
-
-
 </div>

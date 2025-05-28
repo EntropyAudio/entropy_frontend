@@ -8,6 +8,7 @@
       {{ key.label }}
     </button>
   </div>
+
   <div class="flex-row">
     <button *ngFor="let key of row2"
             [class.selected]="selectedKeyId == key.id"
