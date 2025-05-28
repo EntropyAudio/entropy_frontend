@@ -126,6 +126,7 @@ textarea::selection {
   min-height: 2rem !important;
   min-width: 2rem !important;
   z-index: 200 !important;
+  margin: 0 !important;
 }
 
 .button-active {

@@ -31,6 +31,7 @@
   height: 2rem !important;
   color: white;
   background-color: var(--translucent-dark-1);
+  font-size: var(--font-small);
 }
 
 input {
