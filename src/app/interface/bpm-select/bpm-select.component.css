@@ -51,7 +51,7 @@ input::selection {
 }
 
 ::ng-deep .bpm-outline {
-  height: 2.1rem !important;
+  height: 2rem !important;
   margin: 0 !important;
   border-radius: 16px;
 }
