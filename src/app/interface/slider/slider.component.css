@@ -39,6 +39,7 @@
 ::ng-deep .mdc-slider__thumb {
   height: 1rem !important;
   width: 1rem !important;
+  left: -0.5rem !important;
 }
 
 ::ng-deep.mat-mdc-slider .mdc-slider__track--inactive {

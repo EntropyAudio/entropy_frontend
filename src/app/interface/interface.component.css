@@ -159,8 +159,9 @@ textarea::selection {
 .control-panel {
   margin: 1rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .control-item {
@@ -171,6 +172,18 @@ textarea::selection {
   justify-content: center;
   align-items: center;
   margin: 0 2rem 0 2rem;
+}
+
+.control-sliders {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 14rem;
+}
+
+app-slider {
+  width: 100%;
 }
 
 .text-card {
