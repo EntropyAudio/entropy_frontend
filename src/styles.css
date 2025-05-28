@@ -16,6 +16,7 @@
   --background-color: rgb(43, 43, 44);
 
   --none: rgba(53, 53, 54, 1);
+  --clear: rgba(53, 53, 54, 0);
 
   --color-accent: rgba(222, 123, 106, 0.6);
   --color-accent-2: rgba(222, 123, 106, 0.2);

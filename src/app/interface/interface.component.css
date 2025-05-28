@@ -151,7 +151,9 @@ textarea::selection {
   justify-content: center;
   align-items: center;
   height: 8rem;
-  overflow: scroll;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--translucent-dark-1) var(--clear);
 }
 
 .control-panel {
