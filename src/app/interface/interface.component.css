@@ -49,14 +49,14 @@ textarea::selection {
 }
 
 ::ng-deep.mdc-text-field--filled .mdc-line-ripple::after{
-  border-bottom-width: var(--line-size) !important;
+  border-bottom-width: var(--line-size-wavebox) !important;
   border-bottom-color: var(--white) !important;
   border-radius: 4px;
   transition: var(--default-transition) !important;
 }
 
 ::ng-deep.mdc-text-field--filled .mdc-line-ripple::before{
-  border-bottom-width: var(--line-size) !important;
+  border-bottom-width: var(--line-size-wavebox) !important;
   border-bottom-color: var(--ripple) !important;
   border-radius: 4px;
 }
@@ -84,10 +84,10 @@ textarea::selection {
 }
 
 ::ng-deep .text-outline {
-  border: var(--line-size) solid;
+  border: var(--line-size-text-outline) solid;
   position: relative;
   color: var(--translucent-grey-2);
-  border-radius: 20px;
+  border-radius: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -104,7 +104,7 @@ textarea::selection {
   min-width: 2rem !important;
   height: 2rem !important;
   padding: 0 !important;
-  margin: 1rem !important;
+  margin: 0.82rem !important;
   flex-shrink: 0 !important;
   display: flex;
   align-items: center;
@@ -117,14 +117,14 @@ textarea::selection {
   width: 0 !important;
 }
 
-.material-icons {
-  font-size: 2rem !important;
+.mat-icon {
   horiz-align: center;
   vertical-align: middle;
-  width: 2rem !important;
-  height: 2rem !important;
-  min-height: 2rem !important;
-  min-width: 2rem !important;
+  font-size: var(--generate-button-size) !important;
+  width: var(--generate-button-size) !important;
+  height: var(--generate-button-size) !important;
+  min-height: var(--generate-button-size) !important;
+  min-width: var(--generate-button-size) !important;
   z-index: 200 !important;
   margin: 0 !important;
 }
@@ -170,6 +170,7 @@ textarea::selection {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 0 0.38rem 0 0.38rem;
 }
 
 .text-card {
@@ -232,24 +233,22 @@ app-navbar:hover {
   align-items: center;
 }
 
-
 .audio-container {
-  display: flex;
-  flex-direction: column;
-  /*min-height: 8rem;*/
-  align-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-rows: repeat(2, auto);
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: 0.5rem;
   justify-content: center;
-  /*flex-wrap: wrap;*/
 }
 
 app-wavebox {
-  width: 50%;
+  width: 100%;
 }
 
 .generation-list {
   flex-grow: 1;
-  width: min(calc(100vw - 4rem), 48rem);
+  width: min(calc(100vw - 6rem), 46rem);
   padding: 1rem;
   position: relative;
   left: 0;

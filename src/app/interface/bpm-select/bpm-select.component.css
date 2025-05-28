@@ -4,14 +4,8 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 1.5rem;
+  gap: 1.6rem;
 }
-
-/*.mat-error {*/
-/*  padding: 0;*/
-/*  margin: 0;*/
-/*  font-size: .6rem;*/
-/*}*/
 
 .selected {
   background-color: var(--white) !important;
@@ -39,7 +33,7 @@ input {
   caret-color: var(--color-accent) !important;
   text-align: center !important;
   height: 2rem !important;
-  font-size: 1rem !important;
+  font-size: var(--font-normal); !important;
 }
 
 input::selection {
@@ -57,7 +51,7 @@ input::selection {
 }
 
 ::ng-deep .bpm-outline {
-  height: 2rem !important;
+  height: 2.1rem !important;
   margin: 0 !important;
   border-radius: 16px;
 }
@@ -78,7 +72,7 @@ input::selection {
 .inc-arrow {
   width: 1rem !important;
   height: 1rem !important;
-  font-size: 1rem !important;
+  font-size: var(--font-normal); !important;
   color: var(--translucent-grey-2)
 }
 

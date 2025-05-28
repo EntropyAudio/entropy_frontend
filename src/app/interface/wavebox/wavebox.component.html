@@ -13,7 +13,7 @@
     <div [ngStyle]="{'opacity': stateService.getCurrentState() == GenerationState.Displaying || stateService.getCurrentState() == GenerationState.Selected ? 1 : 0}" class="waveform" #waveform></div>
   </div>
 
-  <button [ngStyle]="{'opacity': stateService.getCurrentState() == GenerationState.Displaying ? 1 : 0}" [disabled]="stateService.getCurrentState() != GenerationState.Displaying" class="play-Button" (click)="audioService.pauseAndPlay(audioID)" mat-button>
+  <button [ngStyle]="{'opacity': stateService.getCurrentState() == GenerationState.Displaying ? 1 : 0}" [disabled]="stateService.getCurrentState() != GenerationState.Displaying" class="play-button" (click)="audioService.pauseAndPlay(audioID)" mat-button>
     <mat-icon>play_arrow</mat-icon>
   </button>
 </div>

@@ -1,4 +1,4 @@
-.play-Button {
+.play-button {
   width: 2rem !important;
   height: 2rem !important;
   min-width: 2rem !important;
@@ -27,6 +27,7 @@ mat-icon {
   align-items: center !important;
   text-align: center !important;
   font-size: var(--font-large) !important;
+  margin: 0 !important;
 }
 
 .waveform-cont
@@ -34,7 +35,7 @@ mat-icon {
   position: relative;
   height: 4rem;
   width: 100%;
-  border: var(--line-size) solid var(--translucent-grey-2);
+  border: var(--line-size-wavebox) solid var(--translucent-grey-2);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -126,7 +127,7 @@ mat-icon {
 }
 
 ::ng-deep .mat-progress-bar {
-  height: var(--line-size) !important;
+  height: var(--line-size-wavebox) !important;
   transition: var(--default-transition) !important;
   opacity: 0 !important;
 }

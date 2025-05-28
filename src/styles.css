@@ -8,6 +8,7 @@
 
   --translucent: rgba(var(--greyscale), var(--greyscale), var(--greyscale), 0.4);
   --translucent-grey-2: rgba(200, 200, 200, 0.25);
+  /*--translucent-grey-3: rgba(200, 200, 200, 0.2);*/
 
   --translucent-dark-1: rgba(49, 51, 54, .7);
   --translucent-dark-2: rgba(49, 51, 54, .35);
@@ -22,11 +23,16 @@
   --color-accent-2: rgba(222, 123, 106, 0.2);
   --error: rgb(178, 38, 31);
 
-  --line-size: 0.2rem;
-  --line-size-2: 0.4rem;
+  --line-size-wavebox: 3px;
+  --line-size-text-outline: 3px;
+  --line-size-2: 6px;
+
   --font-large: 1.45rem;
   --font-medium: 1.2rem;
-  --font-small: 0.875rem;
+  --font-normal: 1rem;
+  --font-small: 0.88rem;
+
+  --generate-button-size: 2rem;
 
   --ripple: var(--translucent-dark-1);
   --ripple2: var(--translucent-dark-1);

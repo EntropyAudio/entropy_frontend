@@ -20,11 +20,11 @@ import {Subscription} from "rxjs";
     trigger('listAnimation', [
       transition('* => *', [
         query(':leave', [
-          animate('300ms ease-in', style({ opacity: 0, width: '0%'}))
+          animate('300ms ease-in', style({ opacity: 0}))
         ], { optional: true }),
         query(':enter', [
-          style({ opacity: 0, width: 0}),
-          animate('300ms ease-in', style({ opacity: 1, width: "*"}))
+          style({ opacity: 0}),
+          animate('300ms ease-in', style({ opacity: 1}))
         ], { optional: true }),
       ]),
     ])
