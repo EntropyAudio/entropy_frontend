@@ -33,7 +33,7 @@ input {
   caret-color: var(--color-accent) !important;
   text-align: center !important;
   height: 2rem !important;
-  font-size: var(--font-normal); !important;
+  font-size: var(--font-normal) !important;
 }
 
 input::selection {
@@ -72,7 +72,7 @@ input::selection {
 .inc-arrow {
   width: 1rem !important;
   height: 1rem !important;
-  font-size: var(--font-normal); !important;
+  font-size: var(--font-normal) !important;
   color: var(--translucent-grey-2)
 }
 
