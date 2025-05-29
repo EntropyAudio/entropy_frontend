@@ -18,6 +18,6 @@ RUN `firebase deploy`
 
 export GH_TOKEN=...
 
-ng build --configuration production --base-href="https://github.com/entropyaudio/entropy_frontend"
+ng build --configuration production --base-href="https://entropyaudio.github.io/entropy_frontend/"
 
 npx angular-cli-ghpages --dir=dist/entropy-frontend/browser --no-silent
