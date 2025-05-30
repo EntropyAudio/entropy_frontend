@@ -17,6 +17,7 @@
   justify-content: center;
   align-items: center;
   margin: 1rem 0rem 1rem 0rem;
+  padding: 0 2rem 0 2rem;
 }
 
 mat-icon {
@@ -34,7 +35,7 @@ mat-icon {
 {
   position: relative;
   height: 4rem;
-  width: calc(100% - 2 * var(--line-size-wavebox) - 4rem);
+  width: calc(100% - 2 * var(--line-size-wavebox));
   border: var(--line-size-wavebox) solid var(--translucent-grey-2);
   border-radius: 8px;
   display: flex;
