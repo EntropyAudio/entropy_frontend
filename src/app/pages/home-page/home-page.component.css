@@ -10,7 +10,7 @@
 
 .app-button {
   width: 100%;
-  height: 12rem;
+  height: 11rem;
   color: var(--white);
   font-size: var(--font-large);
   text-align: center;
@@ -24,7 +24,7 @@
 .signin-card {
   padding: 0;
   animation: var(--default-fade);
-  width: min(80vw, 18.6rem);
+  width: min(80vw, 18rem);
   display: flex;
   flex-direction: column;
   justify-content: center;
