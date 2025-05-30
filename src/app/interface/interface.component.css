@@ -9,7 +9,6 @@ input {
   color: var(--white) !important;
   caret-color: var(--color-accent) !important;
   text-align: center !important;
-  /*height: 2rem !important;*/
   font-size: var(--font-medium) !important;
 }
 
@@ -17,7 +16,6 @@ textarea {
   color: var(--white) !important;
   caret-color: var(--color-accent) !important;
   text-align: center !important;
-  /*min-height: 2rem;*/
 }
 
 input::selection {
@@ -165,7 +163,7 @@ textarea::selection {
   align-content: center;
   /*background-color: var(--translucent);*/
   border-radius: 10px;
-  margin: 0 1rem 0 1rem;
+  margin: 1rem 1rem 0 1rem;
 }
 
 .control-item {

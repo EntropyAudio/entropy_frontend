@@ -23,9 +23,9 @@
   --color-accent-2: rgba(222, 123, 106, 0.2);
   --error: rgb(178, 38, 31);
 
-  --line-size-wavebox: 3px;
-  --line-size-text-outline: 3px;
-  --line-size-2: 6px;
+  --line-size-wavebox: 0.1875rem;
+  --line-size-text-outline: 0.1875rem;
+  --line-size-2: 0.375rem;
 
   --font-large: 1.45rem;
   --font-medium: 1.25rem;
