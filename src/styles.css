@@ -6,7 +6,7 @@
   --greyscale: 100;
   --white: #ffffff;
 
-  --translucent: rgba(var(--greyscale), var(--greyscale), var(--greyscale), 0.4);
+  --translucent: rgba(var(--greyscale), var(--greyscale), var(--greyscale), 0.25);
   --translucent-grey-2: rgba(200, 200, 200, 0.25);
   /*--translucent-grey-3: rgba(200, 200, 200, 0.2);*/
 
@@ -28,7 +28,7 @@
   --line-size-2: 6px;
 
   --font-large: 1.45rem;
-  --font-medium: 1.2rem;
+  --font-medium: 1.25rem;
   --font-normal: 1rem;
   --font-small: 0.88rem;
 

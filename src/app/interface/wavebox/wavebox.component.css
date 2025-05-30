@@ -34,7 +34,7 @@ mat-icon {
 {
   position: relative;
   height: 4rem;
-  width: 100%;
+  width: calc(100% - 2rem);
   border: var(--line-size-wavebox) solid var(--translucent-grey-2);
   border-radius: 8px;
   display: flex;

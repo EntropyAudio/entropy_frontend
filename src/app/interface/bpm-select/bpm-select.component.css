@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-  gap: 1.6rem;
+  gap: 1.5rem;
 }
 
 .selected {
@@ -21,7 +21,7 @@
 }
 
 .loop-button {
-  width: 4rem !important;
+  width: 4.8rem !important;
   height: 2rem !important;
   color: white;
   background-color: var(--translucent-dark-1);
@@ -53,7 +53,7 @@ input::selection {
 ::ng-deep .bpm-outline {
   height: 2rem !important;
   margin: 0 !important;
-  border-radius: 16px;
+  border-radius: 8px;
 }
 
 ::ng-deep.mat-mdc-form-field-error{
@@ -66,7 +66,7 @@ input::selection {
   justify-content: space-between !important;
   align-content: center;
   align-items: center;
-  width: 12rem;
+  width: 10rem;
 }
 
 .inc-arrow {
