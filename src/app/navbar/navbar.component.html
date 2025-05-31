@@ -8,7 +8,7 @@
     <a *ngIf="router.url == '/'" routerLink="company" mat-button class="header-buttons header-buttons-optional">
       <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; align-content: center">
         About Us
-<!--                <mat-icon style="transform: rotate(-45deg);">navigate_next</mat-icon>-->
+<!--        <mat-icon style="transform: rotate(-45deg);">navigate_next</mat-icon>-->
       </div>
     </a>
 
@@ -22,23 +22,22 @@
     <button [disabled]="!signedIn" (click)="returnToSettingsMenuDelay($event)" [matMenuTriggerFor]="menu" class="header-buttons" mat-button>
       <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; align-content: center">
         Account
-<!--        <mat-icon *ngIf="signedIn">expand_more</mat-icon>-->
+        <mat-icon>expand_more</mat-icon>
       </div>
     </button>
   </div>
 
-  <mat-menu [hasBackdrop]="false" #menu class="matMenu" xPosition="before">
+  <mat-menu [hasBackdrop]="false" #menu class="mat-menu">
     <div (click)="$event.stopPropagation()">
-      <div *ngIf="settingsMenu">
+
+      <div *ngIf="showSettingsMenu">
         <button (click)="openCreditsMenu($event)" class="menu-item" mat-menu-item> View Credits </button>
         <button (click)="openAudioSettings($event)" class="menu-item" mat-menu-item> App Settings </button>
-        <!--      <button class="menu-item" mat-menu-item> history </button>-->
         <a class="menu-item" routerLink="/" mat-menu-item (click)="signOut()"> Sign Out </a>
       </div>
 
-
       <div class="menu-nav-buttons">
-        <button *ngIf="!settingsMenu" (click)="returnToSettingsMenu($event)" mat-button class="back-button">
+        <button *ngIf="!showSettingsMenu" (click)="returnToSettingsMenu($event)" mat-button class="back-button">
           <mat-icon>navigate_before</mat-icon>
         </button>
 
@@ -47,8 +46,7 @@
         <!--      </button>-->
       </div>
 
-
-      <div class="subMenu" *ngIf="creditsMenu">
+      <div class="sub-menu" *ngIf="showCreditsMenu">
         <div class="credits-menu">
           <div>
             <div class="subscription-tier"> Free</div>
@@ -58,7 +56,7 @@
         </div>
       </div>
 
-      <div class="subMenu" *ngIf="audioSettings">
+      <div class="sub-menu" *ngIf="showAudioSettings">
         <div class="audio-settings">
           <div>
             <div class="audio-settings-title"> Generations Per Prompt</div>
@@ -70,7 +68,7 @@
           </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </mat-menu>
 </mat-toolbar>

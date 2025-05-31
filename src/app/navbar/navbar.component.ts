@@ -15,9 +15,9 @@ import {MatMenu} from "@angular/material/menu";
 export class NavbarComponent implements OnInit {
 
   signedIn = false
-  settingsMenu = false
-  audioSettings = false
-  creditsMenu = false
+  showSettingsMenu = false
+  showAudioSettings = false
+  showCreditsMenu = false
 
   constructor(private auth: AngularFireAuth,
               public router: Router,
@@ -37,39 +37,39 @@ export class NavbarComponent implements OnInit {
 
   openAudioSettings(event: any) {
     event.stopPropagation()
-    this.audioSettings = true
-    this.creditsMenu = false
-    this.settingsMenu = false
+    this.showAudioSettings = true
+    this.showCreditsMenu = false
+    this.showSettingsMenu = false
   }
 
   openCreditsMenu(event: any) {
     event.stopPropagation()
-    this.creditsMenu = true
-    this.audioSettings = false
-    this.settingsMenu = false
+    this.showCreditsMenu = true
+    this.showAudioSettings = false
+    this.showSettingsMenu = false
   }
 
   returnToSettingsMenu(event: any) {
     event.stopPropagation();
-    this.audioSettings = false
-    this.creditsMenu = false
-    this.settingsMenu = true
+    this.showAudioSettings = false
+    this.showCreditsMenu = false
+    this.showSettingsMenu = true
   }
 
   returnToSettingsMenuDelay(event: any) {
     event.stopPropagation();
-    console.log(this.settingsMenu)
-    if(this.creditsMenu || this.audioSettings){
+    console.log(this.showSettingsMenu)
+    if(this.showCreditsMenu || this.showAudioSettings){
       setTimeout(() => {
-        this.audioSettings = false
-        this.creditsMenu = false
-        this.settingsMenu = false
+        this.showAudioSettings = false
+        this.showCreditsMenu = false
+        this.showSettingsMenu = false
       }, 250);
     }
     else {
-      this.audioSettings = false
-      this.creditsMenu = false
-      this.settingsMenu = true
+      this.showAudioSettings = false
+      this.showCreditsMenu = false
+      this.showSettingsMenu = true
     }
   }
 

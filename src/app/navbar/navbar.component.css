@@ -55,11 +55,10 @@
 
 /* Quick Settings */
 
-::ng-deep .matMenu {
+::ng-deep .mat-menu {
   background-color: var(--translucent) !important;
   color: var(--white) !important;
-  transform: translateX(1.5rem) translateY(1rem) !important;
-
+  margin-top: 1rem;
 }
 
 ::ng-deep .mat-mdc-menu-content {
