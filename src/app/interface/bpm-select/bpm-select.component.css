@@ -21,11 +21,12 @@
 }
 
 .loop-button {
-  width: 4.8rem !important;
+  width: 5.5rem !important;
   height: 2rem !important;
   color: white;
   background-color: var(--translucent-dark-1);
   font-size: var(--font-small);
+  padding: 0;
 }
 
 input {
