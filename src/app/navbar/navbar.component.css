@@ -107,7 +107,6 @@
 }
 
 .value-selector {
-  margin-top: 1rem;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -118,11 +117,16 @@
 
 ::ng-deep .num-wavebox-button {
   padding: 0 !important;
-  width: 6rem !important;
+  width: 4rem !important;
   height: 4rem !important;
-  min-width: 6rem !important;
+  min-width: 4rem !important;
   min-height: 4rem !important;
   color: var(--white) !important;
+  font-size: var(--font-normal) !important;
+}
+
+.cost-per-prompt {
+  padding-top: 1rem;
 }
 
 .credits-display {

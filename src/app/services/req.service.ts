@@ -32,8 +32,12 @@ export class ReqService {
     this.halfStepDownMap.set("", "")
   }
 
-  updateNumAudio(value: number) {
+  setNumAudio(value: number) {
     this.numAudio.next(value)
+  }
+
+  getNumAudio() {
+    return this.numAudio.value
   }
 
   formatDescription() {

@@ -82,7 +82,7 @@ export class NavbarComponent implements OnInit {
 
   updateWaveboxes(value: number) {
     if(this.reqService.numAudio.value != value) {
-      this.reqService.updateNumAudio(value)
+      this.reqService.setNumAudio(value)
     }
   }
 

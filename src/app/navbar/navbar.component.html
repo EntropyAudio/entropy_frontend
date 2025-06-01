@@ -61,22 +61,14 @@
         <div class="sub-menu-content">
           <div class="value-selector">
             <button (click)="updateWaveboxes(2)" class="num-wavebox-button" mat-button>
-              <div>
-                2
-              </div>
-              <div>
-                [1 credit]
-              </div>
+              2
             </button>
             <button (click)="updateWaveboxes(4)" class="num-wavebox-button" mat-button>
-              <div>
-                4
-              </div>
-              <div>
-                [2 credits]
-              </div>
+              4
             </button>
           </div>
+<!--          <div>Current selection: {{reqService.getNumAudio()}} </div>-->
+          <div class="cost-per-prompt">Credit cost: {{reqService.getNumAudio()/2}}</div>
         </div>
       </div>
 
