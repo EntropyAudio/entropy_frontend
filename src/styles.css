@@ -89,6 +89,13 @@ html, body {
   bottom: 64px !important;
 }
 
+.horizontal-line {
+  height: 0.1rem;
+  background-color: var(--translucent-grey-2);
+  border-radius: 8px;
+  width: 80%;
+}
+
 .page {
   top: 0;
   bottom:0;

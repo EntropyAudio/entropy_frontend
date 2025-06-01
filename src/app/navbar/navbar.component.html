@@ -27,44 +27,38 @@
     </button>
   </div>
 
-  <mat-menu [hasBackdrop]="false" #menu class="mat-menu">
+  <mat-menu [hasBackdrop]="false" #menu class="mat-menu" xPosition="before">
     <div (click)="$event.stopPropagation()">
 
-      <div *ngIf="showSettingsMenu">
+      <div class="settings-menu" *ngIf="showSettingsMenu">
         <button (click)="openCreditsMenu($event)" class="menu-item" mat-menu-item> View Credits </button>
         <button (click)="openAudioSettings($event)" class="menu-item" mat-menu-item> App Settings </button>
+        <div class="horizontal-line"></div>
         <a class="menu-item" routerLink="/" mat-menu-item (click)="signOut()"> Sign Out </a>
       </div>
 
-      <div class="menu-nav-buttons">
-        <button *ngIf="!showSettingsMenu" (click)="returnToSettingsMenu($event)" mat-button class="back-button">
+      <div *ngIf="!showSettingsMenu" class="sub-menu-header">
+        <button (click)="returnToSettingsMenu($event)" mat-button class="back-button">
           <mat-icon>navigate_before</mat-icon>
         </button>
-
-        <!--      <button *ngIf="!settingsMenu" (click)="returnToSettingsMenu($event)" mat-button class="backBtn" style="font-size: 15px !important;">-->
-        <!--        <mat-icon>close</mat-icon>-->
-        <!--      </button>-->
+        <img src="assets/logo_icon.svg" class="img">
       </div>
 
       <div class="sub-menu" *ngIf="showCreditsMenu">
-        <div class="credits-menu">
-          <div>
-            <div class="subscription-tier"> Free</div>
-            <div class="sub-title">Subscription Tier</div>
-          </div>
+        <div class="sub-menu-title">Free</div>
+        <div class="sub-menu-sub-title">Subscription Tier</div>
+        <div class="sub-menu-content">
           <div class="credits-display">Credits: {{firestore.getCredits()}} / 25</div>
         </div>
       </div>
 
       <div class="sub-menu" *ngIf="showAudioSettings">
-        <div class="audio-settings">
-          <div>
-            <div class="audio-settings-title"> Generations Per Prompt</div>
-            <div class="sub-title">Increasing generations uses more credits per prompt.</div>
-          </div>
+        <div class="sub-menu-title">Generations Per Prompt</div>
+        <div class="sub-menu-sub-title">Number of samples generated per prompt.</div>
+        <div class="sub-menu-content">
           <div class="value-selector">
-            <button (click)="updateWaveboxes(2)" class="num-wavebox-button" mat-button>2</button>
-            <button (click)="updateWaveboxes(4)" class="num-wavebox-button" mat-button>4</button>
+            <button (click)="updateWaveboxes(2)" class="num-wavebox-button" mat-button>2[1 credit]</button>
+            <button (click)="updateWaveboxes(4)" class="num-wavebox-button" mat-button>4 [2 credits]</button>
           </div>
         </div>
       </div>
