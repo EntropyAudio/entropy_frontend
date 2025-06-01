@@ -33,11 +33,6 @@
   color: white !important;
 }
 
-.img {
-  height: 2rem;
-  /*padding-right: 1rem;*/
-}
-
 .logo {
   display: flex;
   align-items: center;
@@ -73,7 +68,7 @@
 
 .sub-menu {
   padding: 1rem 2rem 2rem 2rem;
-  width: 14rem !important;
+  width: 12rem !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -90,13 +85,15 @@
 }
 
 .sub-menu-title {
+  /*margin: 0.5rem 0 0 0;*/
   font-size: var(--font-large);
   width: 10rem !important;
 }
 
 .sub-menu-sub-title {
   color: var(--translucent-grey-2);
-  margin: 1rem 0 1rem 0;
+  margin: 0.5rem 0 0.5rem 0;
+  font-size: var(--font-small);
 }
 
 .sub-menu-content {
@@ -106,6 +103,31 @@
   align-items: center;
   width: 100%;
   height: auto;
+  font-size: var(--font-normal);
+}
+
+.value-selector {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 0.5rem;
+}
+
+::ng-deep .num-wavebox-button {
+  padding: 0 !important;
+  width: 6rem !important;
+  height: 4rem !important;
+  min-width: 6rem !important;
+  min-height: 4rem !important;
+  color: var(--white) !important;
+}
+
+.credits-display {
+  padding-top: 1rem;
+  text-align: center;
 }
 
 ::ng-deep .mat-mdc-menu-content {
@@ -130,6 +152,25 @@
   color: var(--white) !important;
 }
 
+.sub-menu-header-logo {
+  height: 1.75rem;
+  width: 1.75rem;
+  will-change: transform;
+}
+
+.spin {
+  animation: spin 2s cubic-bezier(0.1, 0.4, 0.5, 1) infinite;
+}
+
+.spin-out {
+  animation: spin 2s cubic-bezier(0.1, 0.4, 0.5, 1) 1;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 .mat-icon {
   display: flex !important;
   flex-direction: column !important;
@@ -137,30 +178,6 @@
   align-content: center !important;
   align-items: center !important;
   text-align: center !important;
-  font-size: var(--font-large) !important;
+  font-size: 1.4rem !important;
   margin: 0 !important;
-}
-
-::ng-deep .num-wavebox-button {
-  padding: 0 !important;
-  width: 4rem !important;
-  height: 4rem !important;
-  min-width: 4rem !important;
-  min-height: 4rem !important;
-  color: var(--white) !important;
-}
-
-.value-selector {
-  margin-top: 1rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 1rem;
-}
-
-.credits-display {
-  padding-top: 1rem;
-  text-align: center;
 }

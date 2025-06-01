@@ -1,6 +1,8 @@
 <mat-toolbar>
   <a routerLink="/" class="logo" >
-      <img src="assets/logo_icon.svg" class="img">
+      <img src="assets/logo_icon.svg" class="logo-icon"
+           [class.spin]="stateService.getCurrentState() === GenerationState.Generating"
+           [class.spin-out]="stateService.getCurrentState() === GenerationState.Displaying">
       <span class="logo-text">Entropy Audio</span>
   </a>
 
@@ -34,14 +36,15 @@
         <button (click)="openCreditsMenu($event)" class="menu-item" mat-menu-item> View Credits </button>
         <button (click)="openAudioSettings($event)" class="menu-item" mat-menu-item> App Settings </button>
         <div class="horizontal-line"></div>
-        <a class="menu-item" routerLink="/" mat-menu-item (click)="signOut()"> Sign Out </a>
+        <a class="menu-item" routerLink="/" mat-menu-item (click)="signOut($event)"> Sign Out </a>
       </div>
 
-      <div *ngIf="!showSettingsMenu" class="sub-menu-header">
+      <div *ngIf="isSubMenuShowing()" class="sub-menu-header">
         <button (click)="returnToSettingsMenu($event)" mat-button class="back-button">
           <mat-icon>navigate_before</mat-icon>
         </button>
-        <img src="assets/logo_icon.svg" class="img">
+        <img src="assets/logo_icon.svg"
+             class="logo-icon sub-menu-header-logo">
       </div>
 
       <div class="sub-menu" *ngIf="showCreditsMenu">
@@ -57,8 +60,22 @@
         <div class="sub-menu-sub-title">Number of samples generated per prompt.</div>
         <div class="sub-menu-content">
           <div class="value-selector">
-            <button (click)="updateWaveboxes(2)" class="num-wavebox-button" mat-button>2[1 credit]</button>
-            <button (click)="updateWaveboxes(4)" class="num-wavebox-button" mat-button>4 [2 credits]</button>
+            <button (click)="updateWaveboxes(2)" class="num-wavebox-button" mat-button>
+              <div>
+                2
+              </div>
+              <div>
+                [1 credit]
+              </div>
+            </button>
+            <button (click)="updateWaveboxes(4)" class="num-wavebox-button" mat-button>
+              <div>
+                4
+              </div>
+              <div>
+                [2 credits]
+              </div>
+            </button>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {Router} from "@angular/router";
-import {StateService} from "../services/state.service";
+import {GenerationState, StateService} from "../services/state.service";
 import {ReqService} from "../services/req.service";
 import {FirestoreService} from "../services/firestore.service";
 import {MatMenu} from "@angular/material/menu";
@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
 
   constructor(private auth: AngularFireAuth,
               public router: Router,
-              private stateService: StateService,
+              public stateService: StateService,
               public reqService: ReqService,
               public firestore: FirestoreService) { }
 
@@ -56,20 +56,27 @@ export class NavbarComponent implements OnInit {
     this.showSettingsMenu = true
   }
 
+  exitSettingsMenu(event: any) {
+    event.stopPropagation();
+    this.showAudioSettings = false
+    this.showCreditsMenu = false
+    this.showSettingsMenu = false
+  }
+
+  isSubMenuShowing() {
+    return this.showCreditsMenu || this.showAudioSettings && !this.showSettingsMenu
+  }
+
   returnToSettingsMenuDelay(event: any) {
     event.stopPropagation();
     console.log(this.showSettingsMenu)
     if(this.showCreditsMenu || this.showAudioSettings){
       setTimeout(() => {
-        this.showAudioSettings = false
-        this.showCreditsMenu = false
-        this.showSettingsMenu = false
+        this.exitSettingsMenu(event)
       }, 250);
     }
     else {
-      this.showAudioSettings = false
-      this.showCreditsMenu = false
-      this.showSettingsMenu = true
+      this.returnToSettingsMenu(event)
     }
   }
 
@@ -79,9 +86,12 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  signOut(): void {
+  signOut(event: any): void {
     this.auth.signOut().then(() => {
+      this.exitSettingsMenu(event)
       this.stateService.print("User signed out successfully");
     });
   }
+
+  protected readonly GenerationState = GenerationState;
 }
