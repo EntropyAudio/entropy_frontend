@@ -10,6 +10,7 @@ input {
   caret-color: var(--color-accent) !important;
   text-align: center !important;
   font-size: var(--font-medium) !important;
+  height: 100% !important;
 }
 
 textarea {

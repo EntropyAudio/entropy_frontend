@@ -11,7 +11,6 @@ export class AudioService {
   audioContext = new AudioContext();
   current_prompt = ""
   num_sources = 4
-
   buffers: Map<number, AudioBuffer> = new Map<number, AudioBuffer>();
   srcs: Map<number, AudioBufferSourceNode> = new Map<number, AudioBufferSourceNode>();
   urls: Map<number, SafeUrl> = new Map<number, SafeUrl>();
