@@ -30,8 +30,6 @@ export class AppComponent {
     this.login()
   }
 
-
-
   login() {
   }
 
@@ -44,31 +42,4 @@ export class AppComponent {
       clearInterval(this.intervalId);
     }
   }
-
-  // startPeriodicRequest(): void {
-  //   this.intervalId = setInterval(() => {
-  //     this.sendAPIRequest();
-  //   }, 8000); // every 10 seconds
-  // }
-  //
-  // sendAPIRequest(): void {
-  //   const headers = new HttpHeaders({
-  //     'Content-Type': 'application/json',
-  //     'Authorization': `Bearer ${this.,f}`
-  //   });
-  //   const req = {
-  //     "input": {
-  //       "text": "",
-  //       "entropy": 0,
-  //       "duration": 0,
-  //       "stereo": 0,
-  //       "ping": 1
-  //     }
-  //   }
-  //   this.http.post<any>(this.runsync, req, { headers })
-  //     .subscribe(response =>
-  //     {
-  //       console.log(response)
-  //     });
-  // }
 }

@@ -37,18 +37,8 @@ import {
 import { WaveboxComponent } from "./interface/wavebox/wavebox.component";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
-import {BottomLinksComponent} from "./bottom-links/bottom-links.component";
-
-// const firebaseUiAuthConfig: firebaseui.auth.Config = {
-//   signInFlow: 'popup',
-//     signInOptions: [
-//     firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-//     firebase.auth.EmailAuthProvider.PROVIDER_ID
-//   ],
-//     tosUrl: '<your-tos-link>',
-//     privacyPolicyUrl: '<your-privacyPolicyUrl-link>',
-//     credentialHelper: firebaseui.auth.CredentialHelper.GOOGLE_YOLO
-// };
+import { BottomLinksComponent } from "./bottom-links/bottom-links.component";
+import { AuthConfigModule } from './auth/auth-config.module';
 
 @NgModule({ declarations: [
         AppComponent,
@@ -97,7 +87,7 @@ import {BottomLinksComponent} from "./bottom-links/bottom-links.component";
             // Register the ServiceWorker as soon as the application is stable
             // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:30000'
-        }), BottomLinksComponent], providers: [
+        }), BottomLinksComponent, AuthConfigModule], providers: [
         provideAnimations(),
         // provideOAuthClient(),
         provideHttpClient(withInterceptorsFromDi()),
