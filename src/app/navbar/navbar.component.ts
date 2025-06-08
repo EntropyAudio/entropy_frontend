@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {Router} from "@angular/router";
 import {GenerationState, StateService} from "../services/state.service";
 import {ReqService} from "../services/req.service";
-import {FirestoreService} from "../services/firestore.service";
-import {MatMenu} from "@angular/material/menu";
+import {AuthService} from "../services/auth/auth.service";
 
 
 @Component({
@@ -14,26 +12,16 @@ import {MatMenu} from "@angular/material/menu";
 })
 export class NavbarComponent implements OnInit {
 
-  signedIn = false
   showSettingsMenu = false
   showAudioSettings = false
   showCreditsMenu = false
 
-  constructor(private auth: AngularFireAuth,
+  constructor(public authService: AuthService,
               public router: Router,
               public stateService: StateService,
-              public reqService: ReqService,
-              public firestore: FirestoreService) { }
+              public reqService: ReqService) { }
 
-  ngOnInit(): void {
-    this.auth.authState.subscribe(user => {
-      if (user) {
-        this.signedIn = true
-      } else {
-        this.signedIn = false
-      }
-    });
-  }
+  ngOnInit(): void {}
 
   openAudioSettings(event: any) {
     event.stopPropagation()
@@ -84,13 +72,6 @@ export class NavbarComponent implements OnInit {
     if(this.reqService.numAudio.value != value) {
       this.reqService.setNumAudio(value)
     }
-  }
-
-  signOut(event: any): void {
-    this.auth.signOut().then(() => {
-      this.exitSettingsMenu(event)
-      this.stateService.print("User signed out successfully");
-    });
   }
 
   protected readonly GenerationState = GenerationState;

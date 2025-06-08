@@ -1,7 +1,6 @@
 import {Injectable} from '@angular/core';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 import {ReqService} from "./req.service";
-import {FirestoreService} from "./firestore.service";
 import {StateService} from "./state.service";
 
 @Injectable({
@@ -17,7 +16,6 @@ export class AudioService {
   isPlaying: Map<number, boolean> = new Map<number, boolean>([[0,false], [1,false], [2,false], [3,false]]);
 
   constructor(private sanitizer: DomSanitizer,
-              private firestore: FirestoreService,
               private stateService: StateService) {
   }
 
@@ -78,14 +76,14 @@ export class AudioService {
     this.current_prompt = prompt
     const byteArray = this.convertBase64FileToRaw(base64)
     const audioBlob = new Blob([byteArray], { type: 'audio/wav' });
-    const filename = this.firestore.storePreferenceAudio(audioBlob, prompt)
+    // const filename = this.firestore.storePreferenceAudio(audioBlob, prompt)
     const url = this.sanitizer.bypassSecurityTrustResourceUrl(URL.createObjectURL(audioBlob))
 
     this.assignBufferUrl(audioId, await this.audioContext.decodeAudioData(byteArray.buffer), url)
 
     return {
       "url": url,
-      "filename": filename
+      "filename": ""
     }
   }
 

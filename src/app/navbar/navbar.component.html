@@ -21,7 +21,7 @@
       </div>
     </a>
 
-    <button [disabled]="!signedIn" (click)="returnToSettingsMenuDelay($event)" [matMenuTriggerFor]="menu" class="header-buttons" mat-button>
+    <button [disabled]="!authService.user" (click)="returnToSettingsMenuDelay($event)" [matMenuTriggerFor]="menu" class="header-buttons" mat-button>
       <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; align-content: center">
         Account
         <mat-icon>expand_more</mat-icon>
@@ -36,7 +36,7 @@
         <button (click)="openCreditsMenu($event)" class="menu-item" mat-menu-item> View Credits </button>
         <button (click)="openAudioSettings($event)" class="menu-item" mat-menu-item> App Settings </button>
         <div class="horizontal-line"></div>
-        <a class="menu-item" routerLink="/" mat-menu-item (click)="signOut($event)"> Sign Out </a>
+        <a class="menu-item" routerLink="/" mat-menu-item (click)="authService.signOut()"> Sign Out </a>
       </div>
 
       <div *ngIf="isSubMenuShowing()" class="sub-menu-header">
@@ -51,7 +51,7 @@
         <div class="sub-menu-title">Free</div>
         <div class="sub-menu-sub-title">Subscription Tier</div>
         <div class="sub-menu-content">
-          <div class="credits-display">Credits: {{firestore.getCredits()}} / 25</div>
+          <div class="credits-display">Credits: 0 / 25</div>
         </div>
       </div>
 

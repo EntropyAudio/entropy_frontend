@@ -3,7 +3,7 @@ import {HomePageComponent} from "./pages/home-page/home-page.component";
 import {AppPageComponent} from "./pages/app-page/app-page.component";
 import {CompanyPageComponent} from "./pages/company-page/company-page.component";
 import {TechPageComponent} from "./pages/tech-page/tech-page.component";
-import { AuthGuard } from './services/auth.guard';
+import { AuthGuard } from './services/auth/auth.guard';
 
 export const routeConfig: Routes = [
   {

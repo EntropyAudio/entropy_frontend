@@ -5,7 +5,6 @@ import {ReqService} from "../services/req.service";
 import {MatRipple} from "@angular/material/core";
 import {DOCUMENT} from "@angular/common";
 import {WaveboxComponent} from "./wavebox/wavebox.component";
-import {FirestoreService} from "../services/firestore.service";
 import {DebugState, GenerationState, StateService} from "../services/state.service";
 import {animate, query, style, transition, trigger} from "@angular/animations";
 import {Subscription} from "rxjs";
@@ -66,7 +65,6 @@ export class InterfaceComponent implements OnInit {
               public audioService: AudioService,
               public reqService: ReqService,
               @Inject(DOCUMENT) private document: Document,
-              public firestore: FirestoreService,
               public stateService: StateService
   ) {}
 
@@ -131,14 +129,14 @@ export class InterfaceComponent implements OnInit {
     this.waveboxes.forEach(wb => {
       filenames.push(wb.filename)
     })
-    this.firestore.storePreferenceData(filenames, id)
+    // this.firestore.storePreferenceData(filenames, id)
   }
 
   generate(){
-    if(this.firestore.getCredits() <= 0) {
-      this.stateService.print("user ran out of credits")
-      return
-    }
+    // if(this.firestore.getCredits() <= 0) {
+    //   this.stateService.print("user ran out of credits")
+    //   return
+    // }
     const rippleConfig = {
       centered: true,
       radius: 800,
@@ -170,7 +168,7 @@ export class InterfaceComponent implements OnInit {
   {
     this.stateService.print("cancelling request")
     const body = { reqId: this.currentReqId };
-    const id = await this.firestore.currentUser.getIdToken()
+    const id = ""
     const headers = {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${id}`
@@ -188,7 +186,7 @@ export class InterfaceComponent implements OnInit {
     // Call SendGenReq
 
     const body = {req: req};
-    const id = await this.firestore.currentUser.getIdToken()
+    const id = ""
     const headers = {
       "Content-Type": "application/json",
       "Authorization": `Bearer ${id}` };

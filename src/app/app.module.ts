@@ -1,6 +1,6 @@
 import {NgModule, isDevMode} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms'; // Import FormsModule
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { InterfaceComponent } from './interface/interface.component';
 import { AppComponent } from './app.component';
@@ -20,13 +20,11 @@ import { MatRippleModule} from "@angular/material/core";
 import { MatIconModule} from "@angular/material/icon";
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { MatMenuModule } from "@angular/material/menu";
-import { AngularFireModule } from "@angular/fire/compat";
 import { MatSnackBarModule } from "@angular/material/snack-bar";
-import { AngularFireAuthModule } from "@angular/fire/compat/auth";
 import { HomePageComponent } from "./pages/home-page/home-page.component";
 import { AppPageComponent } from "./pages/app-page/app-page.component";
-import { PreloadAllModules, provideRouter, RouterLink, RouterModule, RouterOutlet} from "@angular/router";
-import { routeConfig, firebaseConfig } from "./configs";
+import { PreloadAllModules, RouterLink, RouterModule, RouterOutlet} from "@angular/router";
+import { routeConfig } from "./configs";
 import { MatTab, MatTabGroup} from "@angular/material/tabs";
 import {
   MatExpansionModule,
@@ -38,7 +36,7 @@ import { WaveboxComponent } from "./interface/wavebox/wavebox.component";
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { BottomLinksComponent } from "./bottom-links/bottom-links.component";
-import { AuthConfigModule } from './auth/auth-config.module';
+
 
 @NgModule({ declarations: [
         AppComponent,
@@ -70,10 +68,7 @@ import { AuthConfigModule } from './auth/auth-config.module';
         MatIconModule,
         MatMenuModule,
         MatSnackBarModule,
-        AngularFireModule.initializeApp(firebaseConfig),
-        AngularFireAuthModule,
-        // FirebaseUIModule.forRoot(firebaseUiAuthConfig),
-        RouterModule.forRoot(routeConfig, {preloadingStrategy: PreloadAllModules}), // Use PreloadAllModules here
+        RouterModule.forRoot(routeConfig, {preloadingStrategy: PreloadAllModules}),
         RouterOutlet,
         RouterLink,
         MatTabGroup,
@@ -84,12 +79,9 @@ import { AuthConfigModule } from './auth/auth-config.module';
         MatExpansionModule,
         ServiceWorkerModule.register('ngsw-worker.js', {
             enabled: !isDevMode(),
-            // Register the ServiceWorker as soon as the application is stable
-            // or after 30 seconds (whichever comes first).
             registrationStrategy: 'registerWhenStable:30000'
-        }), BottomLinksComponent, AuthConfigModule], providers: [
+        }), BottomLinksComponent], providers: [
         provideAnimations(),
-        // provideOAuthClient(),
         provideHttpClient(withInterceptorsFromDi()),
         provideAnimationsAsync(),
     ] })

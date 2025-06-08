@@ -11,10 +11,9 @@
     <mat-card class="text-card" #rippleCard matRipple [matRippleDisabled]="true">
       <div #outline class="text-outline" >
         <button disableRipple="true" [disabled]="stateService.getCurrentState() != GenerationState.Generating
-                                            && (stateService.getCurrentState() == GenerationState.Error || reqService.description == ''
-                                            || this.firestore.getCredits() <= 0)"
+                                            && (stateService.getCurrentState() == GenerationState.Error || reqService.description == '')"
                 class="generate-button" (click)="generate()" mat-button>
-          <mat-icon [ngClass]="{'button-active': reqService.description != '', 'button-inactive': stateService.getCurrentState() == GenerationState.Error || reqService.description == '' || this.firestore.getCredits() <= 0}" *ngIf="stateService.getCurrentState() != GenerationState.Generating">play_arrow</mat-icon>
+          <mat-icon [ngClass]="{'button-active': reqService.description != '', 'button-inactive': stateService.getCurrentState() == GenerationState.Error || reqService.description == ''}" *ngIf="stateService.getCurrentState() != GenerationState.Generating">play_arrow</mat-icon>
           <mat-icon [ngClass]="{'button-active': reqService.description != '', 'button-inactive': stateService.getCurrentState() == GenerationState.Error || reqService.description == ''}" *ngIf="stateService.getCurrentState() == GenerationState.Generating">stop</mat-icon>
         </button>
 

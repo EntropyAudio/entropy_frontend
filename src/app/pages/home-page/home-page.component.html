@@ -8,12 +8,12 @@
       <div class="signin-container" *ngIf="!authService.user">
         <img src="assets/logo_icon.svg" class="logo-icon entropy-logo" >
 
-        <button class="signin-button" mat-flat-button (click)="authService.loginWithGoogle()">
-          <div class="inner-button-container">
-            <img src="assets/google-logo-NePEveMl%20(openai).svg" class="provider-logo">
-            Signin with Google
-          </div>
-        </button>
+<!--        <button class="signin-button" mat-flat-button (click)="authService.loginWithGoogle()">-->
+<!--          <div class="inner-button-container">-->
+<!--            <img src="assets/google-logo-NePEveMl%20(openai).svg" class="provider-logo">-->
+<!--            Signin with Google-->
+<!--          </div>-->
+<!--        </button>-->
 
         <div class="line-container">
           <div class="horizontal-line or-line"></div>
@@ -25,7 +25,7 @@
           <input spellcheck="false" matInput placeholder="Enter Email">
         </mat-form-field>
 
-        <button class="signin-button" mat-flat-button (click)="authService.login('', '')"> Continue </button>
+        <button class="signin-button" mat-flat-button (click)="authService.signIn()"> Continue </button>
       </div>
 
       <a class="app-button" mat-button routerLink="/app" *ngIf="authService.user"> Start Creating </a>

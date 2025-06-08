@@ -1,7 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {AngularFireAuth} from "@angular/fire/compat/auth";
 import {StateService} from "../../services/state.service";
-import {AuthService} from "../../services/auth.service";
+import {AuthService} from "../../services/auth/auth.service";
 
 @Component({
   selector: 'app-home-page',
