@@ -21,7 +21,7 @@
       </div>
     </a>
 
-    <button [disabled]="!authService.user" (click)="returnToSettingsMenuDelay($event)" [matMenuTriggerFor]="menu" class="header-buttons" mat-button>
+    <button [disabled]="!(authService.user$ | async)" (click)="returnToSettingsMenuDelay($event)" [matMenuTriggerFor]="menu" class="header-buttons" mat-button>
       <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; align-content: center">
         Account
         <mat-icon>expand_more</mat-icon>

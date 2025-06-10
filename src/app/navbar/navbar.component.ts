@@ -3,6 +3,8 @@ import {Router} from "@angular/router";
 import {GenerationState, StateService} from "../services/state.service";
 import {ReqService} from "../services/req.service";
 import {AuthService} from "../services/auth/auth.service";
+import {Observable} from "rxjs";
+import {AuthUser} from "@aws-amplify/auth";
 
 
 @Component({
@@ -12,14 +14,15 @@ import {AuthService} from "../services/auth/auth.service";
 })
 export class NavbarComponent implements OnInit {
 
-  showSettingsMenu = false
-  showAudioSettings = false
-  showCreditsMenu = false
+  public showSettingsMenu = false
+  public showAudioSettings = false
+  public showCreditsMenu = false
 
   constructor(public authService: AuthService,
               public router: Router,
               public stateService: StateService,
-              public reqService: ReqService) { }
+              public reqService: ReqService) {
+  }
 
   ngOnInit(): void {}
 

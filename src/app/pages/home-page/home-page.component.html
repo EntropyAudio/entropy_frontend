@@ -5,15 +5,15 @@
     </div>
 
     <mat-card class="signin-card">
-      <div class="signin-container" *ngIf="!authService.user">
+      <div class="signin-container" *ngIf="!(authService.user$ | async)">
         <img src="assets/logo_icon.svg" class="logo-icon entropy-logo" >
 
-<!--        <button class="signin-button" mat-flat-button (click)="authService.loginWithGoogle()">-->
-<!--          <div class="inner-button-container">-->
-<!--            <img src="assets/google-logo-NePEveMl%20(openai).svg" class="provider-logo">-->
-<!--            Signin with Google-->
-<!--          </div>-->
-<!--        </button>-->
+        <button class="signin-button" mat-flat-button (click)="authService.signIn('', '')">
+          <div class="inner-button-container">
+            <img src="assets/google-logo-NePEveMl%20(openai).svg" class="provider-logo">
+            Signin with Google
+          </div>
+        </button>
 
         <div class="line-container">
           <div class="horizontal-line or-line"></div>
@@ -22,13 +22,17 @@
         </div>
 
         <mat-form-field class="email-form" appearance="outline">
-          <input spellcheck="false" matInput placeholder="Enter Email">
+          <input [(ngModel)]="email" spellcheck="false" matInput placeholder="Enter email">
         </mat-form-field>
 
-        <button class="signin-button" mat-flat-button (click)="authService.signIn()"> Continue </button>
+        <mat-form-field class="email-form" appearance="outline">
+          <input [(ngModel)]="password" spellcheck="false" matInput placeholder="Enter password">
+        </mat-form-field>
+
+        <button class="signin-button" mat-flat-button (click)="authService.signIn(email, password)"> Continue </button>
       </div>
 
-      <a class="app-button" mat-button routerLink="/app" *ngIf="authService.user"> Start Creating </a>
+      <a class="app-button" mat-button routerLink="/app" *ngIf="authService.user$ | async"> Start Creating </a>
     </mat-card>
   </div>
 

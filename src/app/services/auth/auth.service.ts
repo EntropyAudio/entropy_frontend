@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject, Observable, Subscription} from "rxjs";
-import {Amplify, fetchAuthSession, Hub} from "@aws-amplify/core";
-import awsconfig from '../../../environments/aws-environment';
-import {getCurrentUser, signInWithRedirect, signOut} from "@aws-amplify/auth";
+import {BehaviorSubject} from "rxjs";
+import {fetchAuthSession} from "@aws-amplify/core";
+import { Hub } from 'aws-amplify/utils';
+import {getCurrentUser, signOut, signIn} from "@aws-amplify/auth";
 
 export interface AuthUser {
   username: string;
@@ -15,16 +15,9 @@ export interface AuthUser {
 export class AuthService {
 
   private userSubject = new BehaviorSubject<AuthUser | null>(null);
-  public userObservable = this.userSubject.asObservable();
-  public user: AuthUser | null = null;
+  public user$ = this.userSubject.asObservable();
 
   constructor() {
-    Amplify.configure(awsconfig);
-
-    this.userObservable.subscribe(user => {
-      this.user = user;
-    });
-
     Hub.listen('auth', ({ payload }) => {
       switch (payload.event) {
         case 'signedIn':
@@ -39,8 +32,16 @@ export class AuthService {
     this.checkCurrentUser();
   }
 
-  public signIn() {
-    return signInWithRedirect();
+  public async signIn(username: string, password: string): Promise<any> {
+    const { isSignedIn, nextStep } = await signIn({
+      username,
+      password,
+      options: {
+        authFlowType: 'USER_PASSWORD_AUTH'
+      }
+    });
+    console.log('isSignedIn', isSignedIn, 'nextStep', nextStep);
+    return { isSignedIn, nextStep };
   }
 
   public signOut() {
@@ -55,19 +56,4 @@ export class AuthService {
       this.userSubject.next(null);
     }
   }
-
-  public async getAccessToken(): Promise<string | null> {
-    try {
-      const session = await fetchAuthSession();
-      return session.tokens?.accessToken.toString() ?? null;
-    } catch (error) {
-      return null;
-    }
-  }
-
-  // loginWithGoogle() {
-  //   const provider = new GoogleAuthProvider();
-  //   return this.auth.signInWithPopup(provider);
-  //   // return this.auth.signInWithRedirect(provider);
-  // }
 }

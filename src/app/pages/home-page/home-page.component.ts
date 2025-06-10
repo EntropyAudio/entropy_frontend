@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {StateService} from "../../services/state.service";
 import {AuthService} from "../../services/auth/auth.service";
 
 @Component({
@@ -9,8 +8,10 @@ import {AuthService} from "../../services/auth/auth.service";
 })
 export class HomePageComponent implements OnInit {
 
-  constructor(private stateService: StateService,
-              public authService: AuthService) {
+  public email: string = '';
+  public password: string = '';
+
+  constructor(public authService: AuthService) {
   }
 
   ngOnInit() {

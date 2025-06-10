@@ -1,17 +1,20 @@
-// src/app/services/auth/auth.guard.ts
-
 import { inject } from '@angular/core';
 import { CanActivateFn, Router, UrlTree } from '@angular/router';
+import { AuthService } from './auth.service';
 import { Observable } from 'rxjs';
 import { map, take } from 'rxjs/operators';
-import { AuthService } from './auth.service'; // Make sure this path is correct
 
-export const AuthGuard: CanActivateFn = (route, state): boolean | UrlTree => {
+export const AuthGuard: CanActivateFn = (route, state): Observable<boolean | UrlTree> => {
   const authService = inject(AuthService);
   const router = inject(Router);
 
-  if (authService.user) {
-    return true;
-  }
-  return router.createUrlTree(['/login']);
+  return authService.user$.pipe(
+    take(1),
+    map(user => {
+      if (user) {
+        return true;
+      }
+      return router.createUrlTree(['/']);
+    })
+  );
 };
